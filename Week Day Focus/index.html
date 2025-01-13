@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {text-align: center; font-family:'Courier New'}
+        h2 {text-align: center; font-family:'Courier New'}
+        </style>
+</head>
+<body style="background-color:#c7d6af;">
+    <h1 id="day"></h1>
+    <h2> Today is about </h2>  
+    <h2 id="focPnt"></h2>
+    <br>
+    <h2> Today's Fitness Goal :  </h2>
+    <h2 id="fitness"></h2>
+    <br>
+    <h2> Today's Betterment Goal :  </h2>
+    <h2 id="hobby"></h2>
+
+</body>
+</html>
+
+<script>
+    let day;
+    let fitness;
+    let hobby;
+    let focPnt;
+    const currentDay = new Date().getDay();
+
+    // from sunday to saturday
+    switch(currentDay) {
+    case 0:
+        day = 'Happy Sunday!';
+        fitness = 'Go for a long run'
+        hobby = 'Work on fashion projects'
+        focPnt = 'Chores and relaxing'
+        break;
+    case 1:
+        day = 'Happy Monday!';
+        fitness = 'Calistenics or Pilates'
+        hobby = 'LeetCode it up'
+        focPnt = 'starting the week off strong'
+        break;
+    case 2:
+        day = 'Happy Tuesday!';
+        fitness = 'Go rock climbing!'
+        hobby = 'LeetCode it up'
+        focPnt = 'career and networking.'
+        break;
+    case 3:
+        day = 'Happy Wednesday!';
+        fitness = 'Go to gym, focusing on core and glutes'
+        hobby = 'LeetCode it up'
+        focPnt = 'self love and taking care of yourself'
+        break;
+    case 4:
+        day = 'Happy Thursday!';
+        fitness = 'Go rock climbing!'
+        hobby = 'Practice guitar <3'
+        focPnt = 'finishing off the week strong!'
+        break;
+    case 5:
+        day = 'Happy Friday!';
+        fitness = 'Go for a long run'
+        hobby = 'Work on fashion projects'
+        focPnt = 'destressing and being producitve'
+        break;
+    case 6:
+        day = 'Happy Saturday!';
+        fitness = 'Go roller Skating!'
+        hobby = 'Work on resume and interview prep.'
+        focPnt = 'spending time with people you love <3'
+        break;
+    default:
+        day = 'Its a new Day!';
+        fitness = 'There is an issue with the code lol'
+        focPnt = 'Proud of you tho!'
+        break;
+
+    }
+
+    document.getElementById("day").innerHTML = day;
+    document.getElementById("fitness").innerHTML = fitness;
+    document.getElementById("hobby").innerHTML = hobby;
+    document.getElementById("focPnt").innerHTML = focPnt;
+    </script>
+
